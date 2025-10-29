@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.linearDamping = 0;
         }
-    }
+}
 
     private void MyInput()
     {
