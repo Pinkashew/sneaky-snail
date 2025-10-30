@@ -36,6 +36,7 @@ public class EnemyController : MonoBehaviour
     public float fleeSpeed = 30f;
     private int consecutiveFramesSeen = 0;
     public int framesToTriggerFlee = 5;
+    public AudioSource wasted;
 
     void Start()
     {
@@ -197,6 +198,7 @@ public class EnemyController : MonoBehaviour
             Vector3 pushDirection = transform.position - collision.transform.position;
             pushDirection = pushDirection.normalized;
             rb.AddForce(pushDirection * pushForce, ForceMode.Impulse);
+            wasted.Play();
         }
     }
 }
